@@ -50,7 +50,7 @@
     border-color: blue;
 }
 
-@media handheld and (max-width:900px){
+@media (max-width:1200px){
     .hi{
         background:  url(../img/boyPhone.png) no-repeat center, url(../img/FonImage.png) no-repeat center/cover , #555555;
         background-blend-mode:multiply;

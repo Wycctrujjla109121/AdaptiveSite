@@ -1,0 +1,71 @@
+.hi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:  url(../img/boyPhone.png) no-repeat right, url(../img/FonImage.png) no-repeat center/cover;
+    width: 100%;
+    min-height: 100%;
+}
+.hi_content{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    align-items: flex-start;
+}
+.hi_items{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.hi_label {
+    text-align: center;
+    font-size: 60px;
+}
+.hi_text { 
+    text-align: center;
+    margin: 30px 0px 60px 0px;
+    font-size: 15px;
+    color: #79818d;
+}
+.hi_btn {
+    text-align: center;
+}
+.hi_btn input{
+    border: 2px solid #6d7682;
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 25px;
+    background-color: transparent;
+}
+.hi_btn input:last-child{
+    margin-right: 0px;
+}
+.hi_btn input:active{
+    transition: 0.5s;
+    transform: scale(1.2);
+    background-color: rgb(29, 40, 58);
+    color: white;
+    border-color: blue;
+}
+
+@media (max-width:1200px){
+    .hi{
+        background:  url(../img/boyPhone.png) no-repeat center, url(../img/FonImage.png) no-repeat center/cover , #555555;
+        background-blend-mode:multiply;
+    }
+    .hi_items{
+        margin: 0 auto;
+    }
+    .hi_label{
+        color: white;
+    }
+    .hi_text{
+        color: white;
+    }
+    .hi_btn input{
+        color: white;
+        border: 2px solid white;
+    }
+}

@@ -1,7 +1,7 @@
 .info_about_me {
     display: flex;
-    max-width: 1150px;
     margin: 0 auto;
+    background-color: white;
 }
 .info_container {
     text-align: center;

@@ -104,3 +104,32 @@
         margin: 10px;
     }
 }
+@media  (max-width:385px){
+    .contact_li li:nth-child(1){
+        margin-left: 25px;
+    }
+    .contact_li li:nth-child(4){
+        margin-right: 25px;
+    }
+}
+
+@media  (max-width:305px){
+    .contact_li li:nth-child(1){
+        margin-left: 50px;
+        margin-right: 65px;
+    }
+    .contact_li li:nth-child(4){
+        margin-right: 0px;
+        margin-right: 50px;
+    }
+}
+@media  (max-width:268px){
+    .contact_li li:nth-child(3){
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .contact_li li:nth-child(1){
+        margin-left: 50px;
+        margin-right: 60px;
+    }
+}

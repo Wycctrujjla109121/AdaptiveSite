@@ -1,0 +1,41 @@
+.reviews {
+    background-color: white;
+}
+.reviews_container {
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+.reviews_label {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+.reviews_line {
+    margin: 20px 0px 40px 0px;
+}
+.reviews_photo {
+    margin-bottom: 30px;
+}
+.reviews_text {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    max-width: 750px;
+    font-size: 14px;
+}
+.reviews_p {
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.radio {
+    margin-bottom: 100px;
+}
+
+@media (max-width:750px) {
+    .reviews_text{
+        padding: 0px 30px 30px 30px;
+    }
+    .reviews_p{
+        padding: 0px 30px;
+    }
+}

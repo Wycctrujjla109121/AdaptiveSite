@@ -42,11 +42,7 @@
     text-transform: uppercase;
 }
 
-/* @media (max-width:440px) {
-    .statistick_row{
-        margin-bottom: 30px;
-    }
-} */
+
 @media  (max-width:880px){
     .statistick_row{
         margin-bottom: 50px;

@@ -1,6 +1,10 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* Доделать */
+.arrow{
+    
+}
 .wrapper {
     height: 100%;
 }
@@ -72,9 +76,16 @@ body{
     color: white;
     font-size: 20px;
 }
+.navitage_btn:hover{
+    transition: 0.3s;
+    border: 2px solid orange;
+    background-color: orange;
+    border-radius: 5px;
+}
 .navigate:hover .navigate_li {
     display: block;
     margin-left: 50px;
+    width: 120px;
 }
 .navigate_li a:hover{
     transform: scale(1.2);
@@ -84,6 +95,9 @@ body{
     background-color: orange;
     transition: 0.3s;
 }
+.navigate_li:active{
+
+}
 
 @media (max-width:900px) {
     .menu{
@@ -91,8 +105,17 @@ body{
     }
     .navigate{
         display: block;
+        background-image: url(../img/icons);
     }
     .row{
         justify-content: space-around;
+    }
+}
+@keyframes roll{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
     }
 }

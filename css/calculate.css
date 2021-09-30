@@ -1,0 +1,66 @@
+.calculate {
+    background-color: white;
+}
+.calculate_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1020px;
+    text-align: center;
+    padding: 0px 30px 100px 30px;
+}
+.calculate_title {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+.type_site {
+}
+.type_design {
+}
+.type_adaptive {
+}
+.select_type{
+    background-color: #eee;
+    width: 100%;
+    height: 40px;
+    color: #737373;
+    font-size: 16px;
+    margin: 15px 0px 30px 0px;
+}
+.type_label{
+    text-align: left;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.calculate_line img{
+    width: 100%;
+}
+.calculate_row {
+    display: flex;
+    justify-content: space-between;
+}
+.calculate_coast_time {
+    text-align: left;
+}
+.time {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.coast {
+    font-size: 16px;
+}
+.time_number {
+    margin-bottom: 3px;
+}
+.coast_number {
+}
+.time_number input{
+    text-align: right;
+    font-size: 22px;
+    width: 100%;
+}
+.coast_number input{
+    width: 100%;
+    text-align: right;
+    font-size: 22px;
+}

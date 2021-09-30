@@ -1,0 +1,37 @@
+.what {
+    background: url(../img/WhatICanDoBGImage.png) no-repeat;
+    background-size: cover;
+}
+.what_container {
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0px;
+}
+.what_label {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.what_line {
+    margin: 20px 0px 100px 0px;
+}
+.what_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.what_container_row{
+    margin: 0 auto;
+}
+.what_container_row img{
+    height: 40px;
+}
+.what_text{
+    font-size: 16px;
+    color: #f38d08;
+    margin: 30px 0px 15px 0px;
+}
+.what_container_row p{
+    max-width: 250px;
+    color: #5f6674;
+}

@@ -1,0 +1,54 @@
+.statistick {
+    background-image: url(../img/statistickBg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.statistick_container {
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0px;
+}
+.statistick_label{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.statistick_line {
+    margin: 20px 0px 80px 0px;
+}
+.statistick_collumn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.statistick_row{
+    margin: 0 auto;
+    width: 220px;
+    align-self: stretch;
+}
+.statistick_row img{
+    height: 55px;
+}
+
+.statistick_text_number {
+    margin: 30px 0px 30px 0px;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 0px 0px;
+}
+.statistick_text {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* @media (max-width:440px) {
+    .statistick_row{
+        margin-bottom: 30px;
+    }
+} */
+@media  (max-width:880px){
+    .statistick_row{
+        margin-bottom: 50px;
+    }
+}

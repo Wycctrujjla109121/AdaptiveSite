@@ -6,7 +6,7 @@ alert("Доброго времени суток!");
 
 if (confirm("Хотите подобрать сайт ?") == true)
 {
-let typeSite = prompt("Выберите тип сайта: 1 - Визитка, 2 - Портал, 3 - Магазин");
+let typeSite = prompt("Выберите тип сайта:\n 1 - Визитка 1200 руб ,\n 2 - Портал 1600 руб,\n 3 - Магазин 2500 руб");
 
 let typeSiteMatrix =     // Матрица ТИП САЙТА!
     [
@@ -46,7 +46,7 @@ while (checkType) {
     }
     else {
         alert("К сожалению данного варианта нет в списке")
-        typeSite = prompt("Выберите тип сайта: 1 - Визитка, 2 - Портал, 3 - Магазин");
+        typeSite = prompt("Выберите тип сайта:\n 1 - Визитка 1200 руб ,\n 2 - Портал 1600 руб,\n 3 - Магазин 2500 руб");
     }
 }
 
@@ -55,7 +55,7 @@ while (checkType) {
 let typeSiteNumber = typeSiteMatrix[typeSite - 1];   //Выбираем нужную нам строку
 
 
-let design = prompt("Выберите дизайн сайта: Жёсткий, Гибкий, Комбинированный");
+let design = prompt("Выберите дизайн сайта:\n Жёсткий 1000 руб,\n Гибкий 1500 руб,\n Комбинированный 2500 руб");
 let checkDesign = true;
 let designNumber;
 let designRow; //Выбираем нужную нам строку
@@ -77,14 +77,14 @@ while (checkDesign) {
     }
     else {
         alert("К сожалению такого варианта нет")
-        design = prompt("Выберите дизайн сайта: Жёсткий, Гибкий, Комбинированный");
+        design = prompt("Выберите дизайн сайта:\n Жёсткий 1000 руб,\n Гибкий 1500 руб,\n Комбинированный 2500 руб");
     }
 }
 
 
 
 
-let adaptiveSiteNumber = prompt("Выберите адаптивность сайта: 1 - без адаптива, 2 - Мобильная, 3 - под все устройства");
+let adaptiveSiteNumber = prompt("Выберите адаптивность сайта:\n 1 - без адаптива 0 руб,\n 2 - Мобильная 2500 руб,\n 3 - под все устройства 4000 руб");
 let adaptiveSiteRow;
 let checkAdaptive = true;
 while (checkAdaptive) {
@@ -102,7 +102,7 @@ while (checkAdaptive) {
     }
     else {
         alert("К сожалению такого варианта нет в списке");
-        adaptiveSiteNumber = prompt("Выберите адаптивность сайта: 1 - без адаптива, 2 - Мобильная, 3 - под все устройства");
+        adaptiveSiteNumber = prompt("Выберите адаптивность сайта: \n 1 - без адаптива 0 руб,\n 2 - Мобильная 2500 руб,\n 3 - под все устройства 4000 руб");
     }
 }
 
@@ -114,10 +114,10 @@ let adaptiveSitePrice = adaptiveSiteRow[1] // Вытаскиваем цену з
 
 totalCoast = typeSitePrice + designPrice + adaptiveSitePrice;
 
-alert("Вы выбрали: тип сайта - " + typeSiteRow[0] + ", Цена - " + typeSitePrice)
-alert("Дизайн сайта - " + designRow[0] + ", Цена - " + designPrice)
-alert("Адаптивность сайта - " + adaptiveSiteRow[0] + ", Цена - " + adaptiveSitePrice)
-alert("Итог по цене: " + totalCoast);
+alert("Вы выбрали: тип сайта:\n " + typeSiteRow[0] + ", Цена - " + typeSitePrice)
+alert("Дизайн сайта:\n " + designRow[0] + ", Цена - " + designPrice)
+alert("Адаптивность сайта:\n " + adaptiveSiteRow[0] + ", Цена - " + adaptiveSitePrice)
+alert("Итог по цене: " + totalCoast + " руб");
 }
 else{
     alert("Очень жаль!");

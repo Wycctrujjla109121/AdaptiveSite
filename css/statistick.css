@@ -42,6 +42,15 @@
     text-transform: uppercase;
 }
 
+.statistick_collumn input{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 0px 0px;
+    width: 100px;
+    text-align: center;
+    background-color: transparent;
+    height: 30px;
+}
 
 @media  (max-width:880px){
     .statistick_row{

@@ -10,13 +10,16 @@ body{
 .wrapper {
     height: 100%;
 }
-.container{
-}
+
 .content{
     height: 60px;
     background-color: #344051;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
 }
 .row {
+
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -39,6 +42,7 @@ body{
 .menu a{
     color: white;
 }
+
 .menu a:hover{
     transition: 0.5s;
     color: orange;
@@ -47,6 +51,7 @@ body{
     display: inline-block;
     transform: scale(0.8);
     transition: 0.3s;
+    color: orange;
 }
 
 .menu li:last-child{
@@ -96,9 +101,7 @@ body{
     background-color: orange;
     transition: 0.3s;
 }
-.navigate_li:active{
 
-}
 
 @media (max-width:900px) {
     .menu{

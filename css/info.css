@@ -46,3 +46,20 @@
     font-size: 14px;
     background: url(../img/icons/infoIconDownload.png)no-repeat 10px 10px;
 }
+.info_button input:active{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.info_button input:hover{
+    background-color: orange;
+    transition: 0.3s;
+}
+
+.element_animation{
+    margin-right: 1000px;
+}
+.element_animation.show_animation{
+    margin-right: 0px;
+    transition: 2.5s;
+    max-height: 100%;
+}

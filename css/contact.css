@@ -63,6 +63,7 @@
     color: #5d5d5e;
     background-color: #d3d6dd;
 }
+
 .text_area textarea{
     width: 100%;
     color: #5d5d5e;
@@ -79,6 +80,15 @@
     margin-top: 30px;
     margin-bottom: 80px;
 }
+.input_message input:hover{
+    transition: 0.3s;
+    border: 2px solid rgb(19, 202, 172);
+    color: rgb(19, 202, 172);
+}
+.input_message input:active{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
 .contact_li ul{
     padding-bottom: 60px;
 }
@@ -87,6 +97,7 @@
     display: inline;
     margin-right: 50px;
 }
+
 .contact_li li:last-child{
     margin-right: 0px;
 }

@@ -31,12 +31,24 @@
                         <div class="logo">Андрей Браун</div>
                         <div class="menu">
                             <ul>
-                                <li><a href="#">обо мне</a></li>
-                                <li><a href="#">услуги</a></li>
-                                <li><a href="#">кейсы</a></li>
-                                <li><a href="#">прайс</a></li>
-                                <li><a href="#">отзывы</a></li>
-                                <li><a href="#">контакты</a></li>
+                                <li>
+                                    <a href="#about_me">обо мне</a>
+                                </li>
+                                <li>
+                                    <a href="#services">услуги</a>
+                                </li>
+                                <li>
+                                    <a href="#keys">кейсы</a>
+                                </li>
+                                <li>
+                                    <a href="#price">прайс</a>
+                                </li>
+                                <li>
+                                    <a href="#feedback">отзывы</a>
+                                </li>
+                                <li>
+                                    <a href="#contacts">контакты</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="navigate">
@@ -45,12 +57,12 @@
                             </button>
 
                             <div class="navigate_li">
-                                <a href="#">Обо мне</a>
-                                <a href="#">услуги</a>
-                                <a href="#">кейсы</a>
-                                <a href="#">прайс</a>
-                                <a href="#">отзывы</a>
-                                <a href="#">контакты</a>
+                                <a href="#about_me">Обо мне</a>
+                                <a href="#services">услуги</a>
+                                <a href="#keys">кейсы</a>
+                                <a href="#price">прайс</a>
+                                <a href="#feedback">отзывы</a>
+                                <a href="#contacts">контакты</a>
                             </div>
                         </div>
                     </div>
@@ -69,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="info_about_me">
+            <div class="info_about_me element_animation" id="about_me">
                 <div class="info_container">
                     <div class="info_title">
                         <div class="info_label">Обо мне</div>
@@ -80,7 +92,7 @@
                     <div class="info_image">
                         <img src="img/InfoImagePhoto.png" alt="">
                     </div>
-                    <div class="info_text">
+                    <div class="info_text ">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare
                             diam. Sed commodo nibh ante
                             facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
@@ -93,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="what">
+            <div class="what" id="services">
                 <div class="what_container">
                     <div class="what_label">Что я умею</div>
                     <div class="what_line">
@@ -131,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="keys">
+            <div class="keys" id="keys">
                 <div class="keys_container">
                     <div class="keys_label">КЕЙСЫ</div>
                     <div class="keys_line">
@@ -170,30 +182,30 @@
                     </div>
                 </div>
             </div>
-            <div class="calculate">
+            <div class="calculate" id="price">
                 <div class="calculate_container">
                     <div class="calculate_title">Расчёт стоимости</div>
-                    <form action="#">
+                    <form action="#" name="form_coast" id="formebanaya">
                         <div class="type_site type type_label">Тип сайта</div>
-                        <select class="select_type" name="type" id="calculate_coast">
+                        <select class="select_type" name="" id="calculate_coast">
                             <option hidden disabled selected>Выберите пункт...</option>
-                            <option value="#">Выберите пункт 1</option>
-                            <option value="#">Выберите пункт 2</option>
-                            <option value="#">Выберите пункт 3</option>
+                            <option value="1">Визитка</option>
+                            <option value="2">Портал</option>
+                            <option value="3">Магазин</option>
                         </select>
                         <div class="type_design type type_label">Дизайн</div>
-                        <select class="select_type" name="design">
+                        <select class="select_type" id="design">
                             <option hidden disabled selected>Выберите пункт...</option>
-                            <option value="#">Выберите пункт 1</option>
-                            <option value="#">Выберите пункт 2</option>
-                            <option value="#">Выберите пункт 3</option>
+                            <option value="1">Жёсткий </option>
+                            <option value="2">Гибкий</option>
+                            <option value="3">Комбинированный</option>
                         </select>
                         <div class="type_adaptive type type_label">Адаптивность</div>
-                        <select class="select_type" name="adaprive">
+                        <select class="select_type" id="adaptive">
                             <option hidden disabled selected>Выберите пункт...</option>
-                            <option value="#">Выберите пункт 1</option>
-                            <option value="#">Выберите пункт 2</option>
-                            <option value="#">Выберите пункт 3</option>
+                            <option value="1">Без адаптива</option>
+                            <option value="2">Мобильная адаптивность</option>
+                            <option value="3">Под все устройства</option>
                         </select>
                     </form>
                     <div class="calculate_line">
@@ -206,16 +218,16 @@
                         </div>
                         <div class="calculate_coast_time_number">
                             <div class="time_number">
-                                <input type="text" value="0" readonly>
+                                <input type="text" id="coastTime" value="0" readonly>
                             </div>
                             <div class="coast_number">
-                                <input type="text" value="0" readonly>
+                                <input type="text" id="coastNumber" value="0" readonly>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="statistick">
+            <div class="statistick ">
                 <div class="statistick_container">
                     <div class="statistick_label">Немного статистики</div>
                     <div class="statistick_line">
@@ -224,28 +236,34 @@
                     <div class="statistick_collumn">
                         <div class="statistick_row">
                             <img src="img/statistick_smile.png" alt="">
-                            <div class="statistick_text_number">120</div>
+                            <div class="statistick_text_number">
+                                <input type="text" value="0" readonly id="number_client">
+                            </div>
                             <div class="statistick_text">Счастливых клиентов</div>
                         </div>
                         <div class="statistick_row">
                             <img src="img/statistickHours.png" alt="">
-                            <div class="statistick_text_number">4,600</div>
+                            <div class="statistick_text_number">
+                                <input type="text" value="0" readonly id="hours_text">
+                            </div>
                             <div class="statistick_text">Часов работы</div>
                         </div>
                         <div class="statistick_row">
                             <img src="img/projectEnd.png" alt="">
-                            <div class="statistick_text_number">340</div>
+                            <div class="statistick_text_number">
+                                <input type="text" readonly value="0" id="project_number"></div>
                             <div class="statistick_text">Проектов завершено</div>
                         </div>
                         <div class="statistick_row">
                             <img src="img/kubok.png" alt="">
-                            <div class="statistick_text_number">23</div>
+                            <div class="statistick_text_number">
+                                <input type="text" readonly id="rewards_number"></div>
                             <div class="statistick_text">Наград получено</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="reviews">
+            <div class="reviews" id="feedback">
                 <div class="reviews_container">
                     <div class="reviews_label">Отзывы</div>
                     <div class="reviews_line">
@@ -265,7 +283,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contact">
+            <div class="contact" id="contacts">
                 <div class="contact_container">
                     <div class="contact_label">Мои контакты</div>
                     <div class="contact_line">
@@ -337,6 +355,7 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/myScript.js"></script>
 </body>
 

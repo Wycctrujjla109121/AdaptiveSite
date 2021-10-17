@@ -1,194 +1,142 @@
 "use strict"
 
-let totalCoast;
-
-alert("Доброго времени суток!");
-
-
-if (confirm("Хотите подобрать сайт ?") == true) {
-    let typeSite;
-    let design;
-    let adaptiveSiteNumber;
-    let checkText = true;
-    let checkTextType = true;
-    let checkTextDesign = true;
-    let checkTextAdaptive = true
-    let checkType = true;
-    let checkDesign = true;
-    let checkAdaptive = true;
+$('.content a').on('click', function () {
+    let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 700,
+        easing: "linear"
+    });
+});
 
 
 
-    while (checkText) {
-        while (checkTextType) {
-            typeSite = prompt("Выберите тип сайта:\n1 - Визитка - 1200 руб ,\n2 - Портал - 1600 руб,\n3 - Магазин - 2500 руб");
-            if (typeSite == "") {
-                alert("Заполните поле");
-            }
-            else if(typeSite == null)
-            {
-                checkTextType = false;
-            }
-            else {
-                checkTextType = false;
-            }
+    let selectType = document.querySelector('#calculate_coast');
+    let selectDesign = document.querySelector('#design');
+    let selectAdaptive = document.querySelector('#adaptive');
+    let priceType;
+    let priceDesign;
+    let priceAdaptive;
+    let totalCoast;
+    let totalTime;
+    let Timetype;
+    let TimeDesign;
+    let TimeAdaptive;
+
+    selectType.onchange = function () {
+        if (selectType.value == 1) {
+            priceType = 1000;
+            Timetype = 1;
         }
-    
-        while (checkTextDesign) {
-            if (typeSite == null)
-            {
-                checkTextDesign = false;
-                checkTextAdaptive = false;
-                checkType = false;
-                checkDesign = false;
-                checkAdaptive = false;
-                break;
-            }
-            design = prompt("Выберите дизайн сайта:\nЖёсткий - 1000 руб,\nГибкий - 1500 руб,\nКомбинированный - 2500 руб");
-            if (design == "") {
-                alert("Заполните поле");
-            }
-            else if (design == null)
-            {
-                checkTextDesign = false;
-                checkTextAdaptive = false;
-                checkType = false;
-                checkDesign = false;
-                checkAdaptive = false;
-                break;
-            }
-            else {
-                checkTextDesign = false;
-            }
+        else if (selectType.value == 2) {
+            priceType = 1600;
+            Timetype = 2;
         }
-        while (checkTextAdaptive) {
-            adaptiveSiteNumber = prompt("Выберите адаптивность сайта: \n1 без адаптива - 0 руб,\n2 Мобильная - 2500 руб,\n3 под все устройства - 4000 руб");
-            if (adaptiveSiteNumber == "") {
-                alert("Заполните поле");
-            }
-            else if (adaptiveSiteNumber == null)
-            {
-                checkTextDesign = false;
-                checkTextAdaptive = false;
-                checkType = false;
-                checkDesign = false;
-                checkAdaptive = false;
-                break;
-            }
-            else {
-                checkTextAdaptive = false;
-            }
+        else if (selectType.value == 3) {
+            priceType = 2400;
+            Timetype = 3;
         }
-        let typeSiteMatrix =     // Матрица ТИП САЙТА!
-            [
-                ["Визитка", 1200],
-                ["Портал", 1600],
-                ["Магазин", 2500],
-            ];
+    };
 
-        let designSiteMatrix =   //  Матрица ДИЗАЙН САЙТА
-            [
-                ["Жёсткий", 1000],
-                ["Гибкий", 1500],
-                ["Комбинированный", 2500],
-            ];
-
-        let adaptiveSiteMatrix =    //Матрица Адаптивности сайта
-            [
-                ["Без адаптива", 0],
-                ["Мобильная адаптивность", 2500],
-                ["Под любые устройства", 4000],
-            ];
-
-        let typeSiteRow;
-        while (checkType) {
-            if (typeSite == 1) {
-                typeSiteRow = typeSiteMatrix[typeSite - 1];
-                checkType = false;
-            }
-            else if (typeSite == 2) {
-                typeSiteRow = typeSiteMatrix[typeSite - 1];
-                checkType = false;
-            }
-            else if (typeSite == 3) {
-                typeSiteRow = typeSiteMatrix[typeSite - 1];
-                checkType = false;
-            }
-            else {
-                alert("К сожалению данного варианта нет в списке")
-                typeSite = prompt("Выберите тип сайта:\n1 - Визитка - 1200 руб ,\n2 - Портал - 1600 руб,\n3 - Магазин - 2500 руб");
-            }
+    selectDesign.onchange = function () {
+        if (selectDesign.value == 1) {
+            priceDesign = 2000;
+            TimeDesign = 2;
         }
-
-
-
-        let typeSiteNumber = typeSiteMatrix[typeSite - 1];   //Выбираем нужную нам строку
-
-
-
-        let designNumber;
-        let designRow; //Выбираем нужную нам строку
-        while (checkDesign) {
-            if (design == "Жёсткий" || design == "Жесткий" || design == "жёсткий" || design == "жесткий") {
-                designNumber = 0;
-                designRow = designSiteMatrix[designNumber]; //Выбираем нужную нам строку
-                checkDesign = false;
-            }
-            else if (design == "Гибкий" || design == "гибкий") {
-                designNumber = 1;
-                designRow = designSiteMatrix[designNumber]; //Выбираем нужную нам строку
-                checkDesign = false;
-            }
-            else if (design == "Комбинированный" || design == "комбинированный") {
-                designNumber = 2;
-                designRow = designSiteMatrix[designNumber]; //Выбираем нужную нам строку
-                checkDesign = false;
-            }
-            else {
-                alert("К сожалению такого варианта нет")
-                design = prompt("Выберите дизайн сайта:\nЖёсткий - 1000 руб,\nГибкий - 1500 руб,\nКомбинированный - 2500 руб");
-            }
+        else if (selectDesign.value == 2) {
+            priceDesign = 2600;
+            TimeDesign = 4;
         }
-
-
-
-
-
-        let adaptiveSiteRow;
-        while (checkAdaptive) {
-            if (adaptiveSiteNumber == 1) {
-                adaptiveSiteRow = adaptiveSiteMatrix[adaptiveSiteNumber - 1];
-                checkAdaptive = false;
-            }
-            else if (adaptiveSiteNumber == 2) {
-                adaptiveSiteRow = adaptiveSiteMatrix[adaptiveSiteNumber - 1];
-                checkAdaptive = false;
-            }
-            else if (adaptiveSiteNumber == 3) {
-                adaptiveSiteRow = adaptiveSiteMatrix[adaptiveSiteNumber - 1];
-                checkAdaptive = false;
-            }
-            else {
-                alert("К сожалению такого варианта нет в списке");
-                adaptiveSiteNumber = prompt("Выберите адаптивность сайта: \n1 без адаптива - 0 руб,\n2 Мобильная - 2500 руб,\n3 под все устройства - 4000 руб");
-            }
+        else if (selectDesign.value == 3) {
+            priceDesign = 3400;
+            TimeDesign = 5;
         }
+    };
 
+    selectAdaptive.onchange = function () {
+        if (selectAdaptive.value == 1) {
+            priceAdaptive = 0;
+            TimeAdaptive = 0;
+        }
+        else if (selectAdaptive.value == 2) {
+            priceAdaptive = 3600;
+            TimeAdaptive = 1;
+        }
+        else if (selectAdaptive.value == 3) {
+            priceAdaptive = 4400;
+            TimeAdaptive = 5;
+        }
+};
 
+formebanaya.onchange = function(){
 
-        let typeSitePrice = typeSiteRow[1]; // Вытаскиваем цену за услугу тип сайта
-        let designPrice = designRow[1];  //Вытаскивания цены за услугу дизайн
-        let adaptiveSitePrice = adaptiveSiteRow[1] // Вытаскиваем цену за услугу адаптива
-
-        totalCoast = typeSitePrice + designPrice + adaptiveSitePrice;
-        
-        alert("Вы выбрали: тип сайта:\n " + typeSiteRow[0] + ", Цена - " + typeSitePrice)
-        alert("Дизайн сайта:\n " + designRow[0] + ", Цена - " + designPrice)
-        alert("Адаптивность сайта:\n " + adaptiveSiteRow[0] + ", Цена - " + adaptiveSitePrice)
-        alert("Итог по цене: " + totalCoast + " руб");
-        checkText = false;
+    if (priceType != undefined && priceDesign != undefined && priceAdaptive != undefined) {
+        totalCoast = priceType + priceDesign + priceAdaptive;
+        totalTime =  Timetype + TimeDesign + TimeAdaptive;
+        document.getElementById('coastNumber').value = totalCoast;
+        if (totalTime == 1 || totalTime == 2 || totalTime == 3 || totalTime == 4)
+        {
+            document.getElementById('coastTime').value = totalTime + " дня";
+        }
+        else{
+            document.getElementById('coastTime').value = totalTime + " дней";
+        }
     }
+};
+
+
+let options = {threshold: [0.5]};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = $('.element_animation');
+elements.each((i,el) => {
+    observer.observe(el);
+});
+
+function onEntry (entry){
+    entry.forEach(change => {
+        if(change.isIntersecting){
+            change.target.classList.add('show_animation');
+        }
+    });
 }
-else {
-    alert("Очень жаль!");
-}
+
+
+
+
+    let i = 0;
+setInterval(() => {
+    if (i < 121)
+    {
+        document.getElementById('number_client').value = i;
+        i++;
+    }
+    
+}, 100);
+
+let j = 0;
+setInterval(() => {
+    if (j<4601)
+    {
+        document.getElementById('hours_text').value = j;
+        j++;
+    }
+}, 1);
+
+let f = 0;
+setInterval(() => {
+    if (f < 341)
+    {
+        document.getElementById('project_number').value = f;
+        f++;    
+    }
+}, 70);
+
+let r = 0;
+setInterval(() => {
+    if (r < 24)
+    {
+        document.getElementById('rewards_number').value = r;
+        r++;
+    }
+}, 1100);

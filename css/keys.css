@@ -74,6 +74,16 @@
     text-transform: uppercase;
     font-size: 16px;
 }
+.visit_button input:active{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.visit_button input:hover{
+    transition: 0.5s;
+    background-color: #06f5e1;
+    color: blue;
+}
+
 
 @media (max-width:1200px) {
     .keys_client_website{

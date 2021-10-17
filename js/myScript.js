@@ -102,41 +102,45 @@ function onEntry (entry){
 }
 
 
+const statistick = document.querySelector('.statistick');
+const statistickPoint = statistick.getBoundingClientRect().y - window.innerHeight;
 
-
+    console.log(statistickPoint + 500);
+    console.log(window.pageYOffset);
     let i = 0;
-setInterval(() => {
-    if (i < 121)
+window.addEventListener('scroll', () =>
+{
+    if (window.pageYOffset > 3200 )
     {
-        document.getElementById('number_client').value = i;
-        i++;
+        setInterval(() => {
+                if (i<121)
+                {
+                    document.getElementById('number_client').value = i;
+                    i++;
+                }
+                if (i<4601)
+                {
+                    document.getElementById('hours_text').value = i;
+                    i++;
+                }
+                if (i<341)
+                {
+                    document.getElementById('project_number').value = i;
+                    i++;
+                }
+                if(i<24)
+                {
+                    document.getElementById('rewards_number').value = i;
+                    i++;
+                }
+        }, 500);
     }
-    
+});
+
+
+
+let content = document.querySelector('.content')
+setTimeout(() => {
+    content.style.display = 'inline';
 }, 100);
 
-let j = 0;
-setInterval(() => {
-    if (j<4601)
-    {
-        document.getElementById('hours_text').value = j;
-        j++;
-    }
-}, 1);
-
-let f = 0;
-setInterval(() => {
-    if (f < 341)
-    {
-        document.getElementById('project_number').value = f;
-        f++;    
-    }
-}, 70);
-
-let r = 0;
-setInterval(() => {
-    if (r < 24)
-    {
-        document.getElementById('rewards_number').value = r;
-        r++;
-    }
-}, 1100);

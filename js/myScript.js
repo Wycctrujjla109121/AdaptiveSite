@@ -102,41 +102,75 @@ function onEntry (entry){
 }
 
 
-const statistick = document.querySelector('.statistick');
-const statistickPoint = statistick.getBoundingClientRect().y - window.innerHeight;
-
-    console.log(statistickPoint + 500);
-    console.log(window.pageYOffset);
-    let i = 0;
-window.addEventListener('scroll', () =>
-{
-    if (window.pageYOffset > 3200 )
-    {
-        setInterval(() => {
-                if (i<121)
-                {
-                    document.getElementById('number_client').value = i;
-                    i++;
-                }
-                if (i<4601)
-                {
-                    document.getElementById('hours_text').value = i;
-                    i++;
-                }
-                if (i<341)
-                {
-                    document.getElementById('project_number').value = i;
-                    i++;
-                }
-                if(i<24)
-                {
-                    document.getElementById('rewards_number').value = i;
-                    i++;
-                }
-        }, 500);
-    }
+let options1 = {threshold: [0.5]};
+let observer1 = new IntersectionObserver(onWork, options1);
+let elements1 = $('.statistick_collumn');
+elements1.each((i,el) => {
+    observer1.observe(el);
 });
 
+    let i = 0;
+    let q = 0;
+    let w = 0;
+    let e = 0;
+
+
+
+function numberClient(){
+    setTimeout(function ()  {
+        i++;
+        document.getElementById('number_client').value = i;
+        if(i < 120)
+        {
+            numberClient();
+        }
+    }, 50);
+}
+
+function hourseText(){
+    setTimeout(function ()  {
+        q+=50;
+        document.getElementById('hours_text').value = q;
+        if(q < 4600)
+        {
+            hourseText();
+        }
+    }, 100);
+}
+
+function projectNumber(){
+    setTimeout(function ()  {
+        w++;
+        document.getElementById('project_number').value = w;
+        if(w < 340)
+        {
+            projectNumber();
+        }
+    }, 30);
+}
+
+function rewardsNumber(){
+    setTimeout(function ()  {
+        e++;
+        document.getElementById('rewards_number').value = e;
+        if(e < 24)
+        {
+            rewardsNumber();
+        }
+    }, 480);
+}
+
+function onWork (entry){
+    entry.forEach(change => {
+        if(change.isIntersecting){
+            console.log("work");
+            numberClient();
+            hourseText();
+            projectNumber();
+            rewardsNumber();
+        }
+    });
+}
 
 
 let content = document.querySelector('.content')

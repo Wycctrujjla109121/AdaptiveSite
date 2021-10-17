@@ -56,10 +56,9 @@
 }
 
 .element_animation{
-    margin-right: 1000px;
+    opacity: 0;
 }
 .element_animation.show_animation{
-    margin-right: 0px;
+    opacity: 1;
     transition: 2.5s;
-    max-height: 100%;
 }

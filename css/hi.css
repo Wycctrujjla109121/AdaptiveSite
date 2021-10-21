@@ -36,8 +36,10 @@
     border: 2px solid #6d7682;
     padding: 10px;
     border-radius: 7px;
-    margin-right: 25px;
     background-color: transparent;
+}
+.hi_btn a{
+    margin-right: 25px;
 }
 .hi_btn input:last-child{
     margin-right: 0px;

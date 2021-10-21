@@ -1,0 +1,37 @@
+.pop_up_window {
+    position: fixed;
+    margin-top: 80px;
+    width: 100%;
+    text-align: right;
+    display: none;
+    justify-content: center;
+}
+.window_text {
+    font-size: 25px;
+}
+.pop_up_winwow_visible{
+    animation-name: visible;
+    animation-duration: 1.5s;
+}
+
+.pop_up_winwow_hiden{
+    transition: 1.5s;
+    opacity: 0;
+}
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes colorRGB{
+    0%{
+        color: red;
+    }
+    100%{
+        color: saddlebrown;
+    }
+}

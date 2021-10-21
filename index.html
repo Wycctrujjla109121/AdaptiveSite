@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/popUp.css">
     <link rel="stylesheet" href="css/hi.css">
     <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/what.css">
@@ -68,6 +69,13 @@
                     </div>
                 </div>
             </header>
+            <div class="pop_up_window" id="pop_up_window_id">
+                <div class="window_text">
+                    <a href="#contacts">
+                        Оставьте мне сообщение!
+                    </a>
+                </div>
+            </div>
             <div class="hi">
                 <div class="hi_content">
                     <div class="hi_items">
@@ -75,8 +83,12 @@
                         </div>
                         <div class="hi_text"> Фулл стек веб - разработчик и Android - разработчик</div>
                         <div class="hi_btn">
-                            <input type="button" value="Обо мне">
-                            <input type="button" value="Мои работы">
+                            <a href="#about_me">
+                                <input type="button" value="Обо мне">
+                            </a>
+                            <a href="#keys">
+                                <input type="button" value="Мои работы">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -311,7 +323,11 @@
                             <div class="contact_icon">
                                 <img src="img/icons/phone.png" alt="">
                             </div>
-                            <div class="contact_p">+7 999 999-99-99</div>
+                            <div class="contact_p">
+                                <a href="tel:+7 999 999-99-99">
+                                    +7 999 999-99-99
+                                </a>
+                            </div>
                         </div>
 
                     </div>

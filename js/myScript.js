@@ -10,6 +10,44 @@ $('.content a').on('click', function () {
     });
 });
 
+$('.hi a').on('click', function () {
+    let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 1000,
+        easing: "linear"
+    });
+});
+
+$('.pop_up_window a').on('click', function () {
+    let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 1000,
+        easing: "linear"
+    });
+});
+
+
+
+    let popUp = document.querySelector('.pop_up_window');
+    setTimeout(() => {
+        popUp.style.display = 'flex';
+        var visibleClass = document.getElementById("pop_up_window_id");
+        visibleClass.classList.add("pop_up_winwow_visible");
+    }, 1500 );
+
+
+    $(".pop_up_window").click(function() {
+        var hidenClass = document.getElementById("pop_up_window_id");
+        hidenClass.classList.add("pop_up_winwow_hiden");
+        setTimeout(() => {
+            popUp.style.display = 'none';
+    }, 1500);
+    });
+
 
 
     let selectType = document.querySelector('#calculate_coast');
@@ -159,15 +197,15 @@ function rewardsNumber(){
         }
     }, 480);
 }
-
+let k = 0;
 function onWork (entry){
     entry.forEach(change => {
-        if(change.isIntersecting){
-            console.log("work");
+        if(change.isIntersecting && k==0){
             numberClient();
             hourseText();
             projectNumber();
             rewardsNumber();
+            k++;
         }
     });
 }
@@ -177,4 +215,5 @@ let content = document.querySelector('.content')
 setTimeout(() => {
     content.style.display = 'inline';
 }, 100);
+
 

@@ -37,7 +37,7 @@ $('.pop_up_window a').on('click', function () {
         popUp.style.display = 'flex';
         var visibleClass = document.getElementById("pop_up_window_id");
         visibleClass.classList.add("pop_up_winwow_visible");
-    }, 1500 );
+    }, 10000 );
 
 
     $(".pop_up_window").click(function() {
@@ -45,7 +45,7 @@ $('.pop_up_window a').on('click', function () {
         hidenClass.classList.add("pop_up_winwow_hiden");
         setTimeout(() => {
             popUp.style.display = 'none';
-    }, 1500);
+    }, 2000);
     });
 
 

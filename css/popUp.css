@@ -11,11 +11,11 @@
 }
 .pop_up_winwow_visible{
     animation-name: visible;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
 
 .pop_up_winwow_hiden{
-    transition: 1.5s;
+    transition: 1s;
     opacity: 0;
 }
 

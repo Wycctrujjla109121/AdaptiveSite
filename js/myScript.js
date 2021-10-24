@@ -37,7 +37,7 @@ $('.pop_up_window a').on('click', function () {
         popUp.style.display = 'flex';
         var visibleClass = document.getElementById("pop_up_window_id");
         visibleClass.classList.add("pop_up_winwow_visible");
-    }, 10000 );
+    }, 1000 );
 
 
     $(".pop_up_window").click(function() {
@@ -140,7 +140,7 @@ function onEntry (entry){
 }
 
 
-let options1 = {threshold: [0.5]};
+let options1 = {threshold: [1]};
 let observer1 = new IntersectionObserver(onWork, options1);
 let elements1 = $('.statistick_collumn');
 elements1.each((i,el) => {

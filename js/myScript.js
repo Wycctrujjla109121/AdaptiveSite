@@ -37,7 +37,7 @@ $('.pop_up_window a').on('click', function () {
         popUp.style.display = 'flex';
         var visibleClass = document.getElementById("pop_up_window_id");
         visibleClass.classList.add("pop_up_winwow_visible");
-    }, 1000 );
+    }, 10000 );
 
 
     $(".pop_up_window").click(function() {
@@ -217,3 +217,44 @@ setTimeout(() => {
 }, 100);
 
 
+
+
+document.getElementById("bar1").onclick = function(){
+    this.style.backgroundColor ="blue";
+    this.classList.toggle("bar_active")
+
+    if (document.getElementById("bar2").classList.contains("bar_active") || document.getElementById("bar3").classList.contains("bar_active"))
+    {
+        document.getElementById("bar2").classList.remove("bar_active");
+        document.getElementById("bar3").classList.remove("bar_active");
+    }
+
+    document.getElementById("bar2").style.backgroundColor = "#ddd";
+    document.getElementById("bar3").style.backgroundColor = "#ddd";
+};
+document.getElementById("bar2").onclick = function(){
+    this.style.backgroundColor ="red";
+    this.classList.toggle("bar_active")
+
+    if (document.getElementById("bar1").classList.contains("bar_active") || document.getElementById("bar3").classList.contains("bar_active"))
+    {
+        document.getElementById("bar1").classList.remove("bar_active");
+        document.getElementById("bar3").classList.remove("bar_active");
+    }
+
+    document.getElementById("bar1").style.backgroundColor = "#ddd";
+    document.getElementById("bar3").style.backgroundColor = "#ddd";
+};
+document.getElementById("bar3").onclick = function(){
+    this.style.backgroundColor ="purple";
+    this.classList.toggle("bar_active")
+
+    if (document.getElementById("bar1").classList.contains("bar_active") || document.getElementById("bar2").classList.contains("bar_active"))
+    {
+        document.getElementById("bar1").classList.remove("bar_active");
+        document.getElementById("bar2").classList.remove("bar_active");
+    }
+
+    document.getElementById("bar2").style.backgroundColor = "#ddd";
+    document.getElementById("bar1").style.backgroundColor = "#ddd";
+};

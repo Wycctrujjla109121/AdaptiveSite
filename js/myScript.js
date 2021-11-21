@@ -258,3 +258,65 @@ document.getElementById("bar3").onclick = function(){
     document.getElementById("bar2").style.backgroundColor = "#ddd";
     document.getElementById("bar1").style.backgroundColor = "#ddd";
 };
+
+
+
+document.getElementById('review1').addEventListener('click', clickR1, true);
+document.getElementById('review2').addEventListener('click', clickR2, true);
+document.getElementById('review3').addEventListener('click', clickR3, true);
+
+
+function clickR1(){
+    console.log('WorkR1');
+    
+    document.getElementById('review_1').style.marginLeft = '0px';
+    document.getElementById('review_2').style.marginLeft = '1150px';
+    document.getElementById('review_3').style.marginLeft = '2300px';
+
+    setTimeout(() => {
+        if (document.querySelector('.radio1 input[id="review1"]').checked == true)
+        {
+            document.querySelector('.radio1 input[id="review2"]').checked = true;
+            clickR2();
+        }
+    }, 3000);
+}
+
+function clickR2(){
+    console.log('WorkR2');
+
+    document.getElementById('review_2').style.marginLeft = '0px';
+    document.getElementById('review_1').style.marginLeft = '-1150px';
+    document.getElementById('review_3').style.marginLeft = '2300px';
+
+    setTimeout(() => {
+        if (document.querySelector('.radio1 input[id="review2"]').checked == true)
+        {
+            document.querySelector('.radio1 input[id="review3"]').checked = true;
+            clickR3();
+        }
+    }, 3000);
+}
+
+function clickR3(){
+    console.log('WorkR3');
+
+    document.getElementById('review_3').style.marginLeft = '0px';
+    document.getElementById('review_2').style.marginLeft = '-1150px';
+    document.getElementById('review_1').style.marginLeft = '-2300px';
+
+    setTimeout(() => {
+        if (document.querySelector('.radio1 input[id="review3"]').checked == true)
+        {
+            document.querySelector('.radio1 input[id="review1"]').checked = true;
+            clickR1();
+        }
+    }, 3000);
+}
+
+clickR1();
+
+
+function clickKeys(){
+    
+}
